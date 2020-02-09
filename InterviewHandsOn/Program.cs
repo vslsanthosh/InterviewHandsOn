@@ -6,15 +6,33 @@ namespace InterviewHandsOn
     {
         static void Main(string[] args)
         {
-            // test code goes here
+            myClass1 myc1 = new myClass1();
+
+            myc1.add(2,4);
+            Test1 T1 = new myClass1();
+            T1.add();
+
+            Test2 T2 = new myClass1();
+
+            T2.add();
         }
     }
 
-    sealed class myClass1
+    sealed class myClass1 : Test1, Test2
     {
         public int add(int no1, int no2)
         {
             return no1 + no2;
+        }
+
+        void Test1.add()
+        {
+            Console.WriteLine("Interface method T1");
+        }
+
+        void Test2.add()
+        {
+            Console.WriteLine("Interface method T2");
         }
     }
 
@@ -34,4 +52,7 @@ namespace InterviewHandsOn
 
         void add();
     }
+
+    interface Test2
+    { void add(); }
 }
