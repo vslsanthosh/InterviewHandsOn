@@ -8,7 +8,7 @@ namespace InterviewHandsOn
         {
             myClass1 myc1 = new myClass1();
 
-            myc1.add(2,4);
+            myc1.add(2, 4);
             Test1 T1 = new myClass1();
             T1.add();
 
@@ -20,6 +20,7 @@ namespace InterviewHandsOn
 
     sealed class myClass1 : Test1, Test2
     {
+
         public int add(int no1, int no2)
         {
             return no1 + no2;
@@ -55,4 +56,25 @@ namespace InterviewHandsOn
 
     interface Test2
     { void add(); }
+
+    /// private constructor
+    /// 
+
+    class PrivateConstructor
+    {
+        private PrivateConstructor()
+        { }
+
+        void sum()
+        { Console.WriteLine("sum"); }
+
+    }
+
+    // below code will not work
+    // class ImplementPrivateConstructor : PrivateConstructor 
+    class ImplementPrivateConstructor
+    {
+
+
+    }
 }
