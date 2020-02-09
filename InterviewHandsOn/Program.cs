@@ -29,4 +29,9 @@ namespace InterviewHandsOn
         }
     }
 
+    interface Test1
+    {
+
+        void add();
+    }
 }
